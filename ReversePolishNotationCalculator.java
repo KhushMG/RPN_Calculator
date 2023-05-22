@@ -30,6 +30,7 @@ public class ReversePolishNotationCalculator {
         double result;
 
         ShouldWeTryAgain: while (evalAgain == 'y') {
+            s.clear();
             double nextNumber = 0;
             String operator = "";
             System.out.println("\nRPN calculator");
