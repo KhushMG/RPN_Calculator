@@ -62,7 +62,7 @@ public class ReversePolishNotationCalculator {
                     } else {
                         s.push(nextNumber);
                     }
-
+                // If an operator is encountered, perform an operation with previous operands
                 } else {
                     operator = scExpr.next();
                     if (operator.length() > 1) {
@@ -91,6 +91,7 @@ public class ReversePolishNotationCalculator {
                     /* get the top operand off the number stack */
                     operand1 = s.pop();
 
+                    // Cases for each operation type
                     switch (operator) {
                         default:
                             System.err.println("ERROR! Operator not recognized: " + operator);
@@ -123,63 +124,6 @@ public class ReversePolishNotationCalculator {
             }
             // if the next thing in the expression is not a number then we'll assume it's an
             // operator
-            // (unless we find out that it's not a supported operator)
-            // // "4 3 -" should be +1, not -1
-            // // When parsing the expression 4 is pushed first, then 3
-            // // the second operand (the 3) is at the top (so we'll pop that into operand2)
-            // // then pop the first operand (the 4) into operand1
-            // if (s.isEmpty()) {
-            // System.err.println(
-            // "ERROR! Expected to find 2 operands (numbers) but we don't have any number on
-            // the stack!");
-            // System.out.println(
-            // "Since we can't evaluate that expression we'll ask you for another one to
-            // evaluate instead");
-            // continue ShouldWeTryAgain;
-            // }
-            // /* get the top operand off the number stack */
-            // operand2 = s.pop();
-            // if (s.isEmpty()) {
-            // System.err.println(
-            // "ERROR! Expected to find 2 operands (numbers) but we don't have a second
-            // number on the stack!");
-            // System.out.println(
-            // "Since we can't evaluate that expression we'll ask you for another one to
-            // evaluate instead");
-            // continue ShouldWeTryAgain;
-            // }
-            // /* get the top operand off the number stack */
-            // operand1 = s.pop();
-
-            // switch (operator) {
-            // default:
-            // System.err.println("ERROR! Operator not recognized: " + operator);
-            // System.out.println(
-            // "Since we can't evaluate that expression we'll ask you for another one to
-            // evaluate instead");
-            // continue ShouldWeTryAgain; // This line will jump back to the outer loop
-            // case "+":
-            // result = operand2 + operand1;
-            // s.push(result);
-            // break;
-            // case "-":
-            // result = -1 * (operand2 - operand1);
-            // s.push(result);
-            // break;
-            // case "/":
-            // result = operand2 / operand1;
-            // s.push(result);
-            // break;
-            // case "*":
-            // result = operand2 * operand1;
-            // s.push(result);
-            // break;
-
-            // }
-            // if (explain)
-            // System.out.println("\tPopping " + operand1 + " and " + operand2 + " then
-            // applying "
-            // + operator + " to them, then pushing the result back onto the stack");
 
             // At this point we've finished reading through the expression
 
@@ -187,8 +131,7 @@ public class ReversePolishNotationCalculator {
             // message:
             int size = s.size();
 
-
-            
+            // Operands left with no operators
             if (s.size() > 1) {
                 System.err.println("ERROR! Ran out of operators before we used up all the operands (numbers):");
                 // Go through all the operands an print them out:
@@ -196,15 +139,15 @@ public class ReversePolishNotationCalculator {
                     System.err.println("\t" + s.pop());
                 }
             }
-
+            // Final result is inside of stack, pop it and print it
             else if (s.size() == 1) {
                 System.out.println("END RESULT: " + s.pop());
             }
-
+            // No numbers in stack
             else if (s.isEmpty()) {
                 System.err.println("ERROR! Ran out of operands (numbers)");
             }
-
+            // Prompt for next evaluation
             System.out
                     .print("\nWould you like to evaluate another expression? (y or Y for yes, anything else to exit) ");
             s.clear();
