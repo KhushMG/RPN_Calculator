@@ -186,6 +186,9 @@ public class ReversePolishNotationCalculator {
             // If there's more than 1 operand (number) left then we print this error
             // message:
             int size = s.size();
+
+
+            
             if (s.size() > 1) {
                 System.err.println("ERROR! Ran out of operators before we used up all the operands (numbers):");
                 // Go through all the operands an print them out:
