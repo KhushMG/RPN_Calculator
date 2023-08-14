@@ -5,4 +5,5 @@ For example, we may look at the same mathematical expression represented in Poli
 <strong>Reverse Polish Notation:</strong> 3 5 + <br>
 Reverse Polish Notation places the operator (in this case the + sign) after the operands (the numbers 3 and 5)
 <br>Both of these expressions will still result in 8. <br> 
-Visit [here](https://mathworld.wolfram.com/ReversePolishNotation.html) for more information on Reverse Polish Notation. 
+
+Visit [WolframAlpha's](url) page on Reverse Polish Notation  to learn more.
