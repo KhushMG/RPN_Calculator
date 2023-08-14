@@ -1,1 +1,8 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=11195451&assignment_repo_type=AssignmentRepo)
+# Reverse Polish Notation 
+<p>Reverse Polish Notation, also known as Postfix Notation, is when the operator (such as +, -, ÷, or ×) is placed after the operands (the numbers) in a mathematical expression. <br></p> 
+For example, we may look at the same mathematical expression represented in Polish Notation and Reverse Polish Notation. <br>
+<strong>Polish Notation:</strong> 3 + 5 <br>
+<strong>Reverse Polish Notation:</strong> 3 5 + <br>
+Reverse Polish Notation places the operator (in this case the + sign) after the operands (the numbers 3 and 5)
+<br>Both of these expressions will still result in 8. <br> 
+Visit [here](https://mathworld.wolfram.com/ReversePolishNotation.html) for more information on Reverse Polish Notation. 
